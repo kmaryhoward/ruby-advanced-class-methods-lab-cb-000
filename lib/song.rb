@@ -47,7 +47,7 @@ class Song
     song = self.new
     new_file = filename.split("-")
     song.name = new_file[1].sub(".mp3","").strip
-    song.artist_name = new_file[0]
+    song.artist_name = new_file[0].strip
     song
   end
 
@@ -55,7 +55,7 @@ class Song
     song = self.new
     new_file = filename.split("-")
     song.name = new_file[1].sub(".mp3","").strip
-    song.artist_name = new_file[0]
+    song.artist_name = new_file[0].strip
     @@all << song
     song
   end
